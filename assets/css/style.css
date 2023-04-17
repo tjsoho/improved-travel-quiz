@@ -1,4 +1,6 @@
 /* create a color var to use as a golobal color */
+
+
 :root{
     --offwhite: rgb(249, 238, 223);
     --brown: #472F2B;

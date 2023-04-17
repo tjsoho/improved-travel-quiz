@@ -1,0 +1,26 @@
+/* background color #e9cec3 */
+:root{
+    --offwhite: rgb(249, 238, 223);
+    --brown: #472F2B;
+}
+
+header {
+    margin-top: 20px;
+    height: 60px;
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: var(--offwhite);
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+body{
+    background-color: #6e4a3b;
+}
+
+#startGame{
+    background-color: var(--offwhite);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border: solid 1px;
+}
