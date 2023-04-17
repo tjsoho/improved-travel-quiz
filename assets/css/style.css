@@ -1,0 +1,24 @@
+/* create a color var to use as a golobal color */
+:root{
+    -- button
+}
+
+body{
+    background-color:#FAD6A5;
+}
+
+.mainSection {
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+}
+
+.image-grid {
+    width: 500px;
+    height: 400px;
+}
+
+.flyer-img {
+    width: 100%;
+    height: 100%;
+}
