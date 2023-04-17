@@ -18,9 +18,23 @@ body{
     background-color: #6e4a3b;
 }
 
+/* All buttons styling */
+
 #startGame{
     background-color: var(--offwhite);
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
     border: solid 1px;
+}
+
+#nextQuestion{
+    background-color: var(--offwhite);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border: solid 1px;
+}
+
+
+.correct-answer{
+    background-color: green;
 }

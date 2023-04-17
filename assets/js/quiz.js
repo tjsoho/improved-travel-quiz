@@ -2,9 +2,12 @@ var questionIndex = 0;
 var win = 0;
 var loss = 0;
 var score = "";
+var winCount = localStorage.getItem("Win Count")
+var lossCount = localStorage.getItem("Loss Count")
 var startBtn = document.getElementById("startGame");
 var questionsEl = document.getElementById("questions");
 var answerOptionsEl = document.getElementById("answerOptions");
+var nextQuestionEl = document.getElementById("nextQuestion");
 var questionsAll =
 	[
 		{
@@ -60,3 +63,91 @@ function startGame (){
             item.addEventListener('click', checkAnswer)
         })
     }
+
+    function checkAnswer() {
+        disableButtons();
+        const selectedAnswer = this;
+        const correctAnswer = document.querySelector(".correct-answer"); 
+    
+        if (selectedAnswer.textContent === questionsAll[questionIndex].answer) {
+            selectedAnswer.style.backgroundColor = "green";
+            win++;
+            localStorage.setItem("Win Count", win);
+        } else {
+            selectedAnswer.style.backgroundColor = "red";
+            correctAnswer.style.backgroundColor = "green"; // Set the background color of the correct answer element to green
+            loss++;
+            localStorage.setItem("Loss Count", loss);
+            // secondsLeft -= 5
+        }
+    
+        if (questionIndex === questionsAll.length - 1) {
+            document.getElementById("nextQuestion").style.visibility = "hidden";
+            document.getElementById("storeDetails").style.visibility = "visible";
+        }
+    }
+    
+
+    // This function disables the buttons once the user has answered the question.
+function disableButtons() {
+	document.querySelectorAll('.answer0').forEach(item => {
+		item.removeEventListener("click", checkAnswer)
+		if (questionIndex < questionsAll.length - 1) {
+			item.disabled = false;
+		}
+	});
+}
+disableButtons()
+
+    
+// next question function
+nextQuestionEl.addEventListener('click', function () {
+	questionIndex++
+	questionnaire()
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // function checkAnswer() {
+    //     // disableButtons()
+    //     if (this.textContent == questionsAll[questionIndex].answer) {
+    //         this.style.backgroundColor = "green";
+            // document.getElementById("answerContent").style.display = "block";
+            // win++;
+            // winCountEl.textContent = win;
+            // localStorage.setItem("Win Count", win);
+        // }
+        // else {
+        //     this.style.backgroundColor = "red";
+        //     answerContentEl.textContent = `❌ WHOOPS!! The answer is ${questionsAll[questionIndex].answer}. Better luck next time! 😀`;
+        //     document.getElementById("answerContent").style.display = "block";
+        //     loss++;
+        //     lossCountEl.textContent = loss;
+        //     localStorage.setItem("Loss Count", loss);
+        //     secondsLeft -= 5
+        //     sendMessage();
+        // }
+    
+        // if (questionIndex === questionsAll.length - 1) {
+        //     document.getElementById("next-finsih").style.visibility = "hidden";
+        //     document.getElementById("storeDetails").style.visibility = "visible";
+        
