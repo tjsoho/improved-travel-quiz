@@ -38,3 +38,34 @@ body{
 .correct-answer{
     background-color: green;
 }
+
+/* success images that are hidden on the html until the final score */
+.sucess-Image{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #success1 {
+    display: none;
+  }
+  
+  #success2 {
+    display: none;
+  }
+  
+  #success3 {
+    display: none;
+  }
+  
+  #success4 {
+    display: none;
+  }
+
+/* Elements that are hidden at the beginning of the game */
+  #storeDetails{
+    display: none;
+  }
+
+  #nextQuestion{
+    display: none;
+  }

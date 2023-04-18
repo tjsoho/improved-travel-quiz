@@ -48,7 +48,52 @@
         <div class="score"></div>
     </section>
 
-    <script src="./assets/js/quiz.js"></script>
+    <div id="storeDetails">
+        <h4>Type Your Initials to Find Out Your Score. </h4>
+        <div id="input">
+            <input type="text" id="inputDetails"></input>
+            <button id="submitBtn">CONFRIM</button>
+        </div>
+    </div>
+
+
+        <!-- Entire left square section containing images, question and answer options -->
+        <section class="background-1" id="end-game">
+            <h4 id="finalScore"></h4>
+            <!-- Container for success images hidden until only one is revealed at the end-->
+            <div id="success1">
+                <h3 id="finalScore1"></h3>
+                <h4>You have Economy status</h4>
+                <p>Please wait for everyone else to board. Don't forget your neck pillow.</p>
+                <img class="sucess-Image" src="./assets/images/economy.png" alt="">
+                <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
+            </div>
+
+            <div id="success2">
+                <h3 id="finalScore2"></h3>
+                <h4>You have Premium-Economy status</h4>
+                <p>You can almost feel ritzy.</p>
+                <img class="sucess-Image" src="./assets/images/p-economy.png" alt="">
+                <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
+            </div>
+
+            <div id="success3">
+                <h3 id="finalScore3"></h3>
+                <h4>You have Business Class status</h4>
+                <p>Enjoy your champange and sleep like a baby.</p>
+                <img class="sucess-Image" src="./assets/images/business.png" alt="">
+                <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
+            </div>
+
+            <div id="success4">
+                <h3 id="finalScore4"></h3>
+                <h4>You have First Class status</h4>
+                <p>Its Dom Perignon and Caviar for you my friend.</p>
+                <img class="sucess-Image" src="./assets/images/first.png" alt="">
+                <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
+            </div>
+
+            <script src="./assets/js/quiz.js"></script>
 </body>
 
 </html>
