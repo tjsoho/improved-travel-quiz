@@ -75,7 +75,7 @@ function questionnaire() {
 function checkAnswer() {
     disableButtons();
     const selectedAnswer = this;
-    const correctAnswer = document.querySelector("."+ questionsAll[questionIndex].ans);
+    const correctAnswer = document.querySelector("." + questionsAll[questionIndex].answer[0]);
 
     if (selectedAnswer.textContent === questionsAll[questionIndex].answer) {
         selectedAnswer.style.backgroundColor = "green";
@@ -87,11 +87,6 @@ function checkAnswer() {
         loss++;
         localStorage.setItem("Loss Count", loss);
         // secondsLeft -= 5
-    }
-
-    if (questionIndex === 3) {
-        document.getElementById("nextQuestion").style.display = "none";
-        document.getElementById("storeDetails").style.display = "block";
     }
 }
 
@@ -113,7 +108,10 @@ nextQuestionEl.addEventListener('click', function () {
     questionIndex++
     console.log(questionIndex)
     questionnaire()
-    document.getElementById("storeDetails").style.display = "block";
+    if (questionIndex === 3) {
+        document.getElementById("storeDetails").style.display = "block";
+        document.getElementById("nextQuestion").style.display = "none";
+    }
 
 });
 
@@ -141,19 +139,27 @@ function countDown() {
     }, 1000);
 }
 
+// This function tallys the final score
+function scoreTotal() {
+	var tally = win - loss;
+	console.log(tally);
+	return tally;
+}
+
+
+// Function to set the score and users initials to local storage
 submit.addEventListener('click', function () {
-	const val = document.querySelector('input').value;
-	localStorage.setItem("Initials", input.value);
-	finalScoreEl.textContent = "You scored " + getWinCount() + "/4";
-	
-	//save score to a high score scoreboard in local storage
-	var highScore = localStorage.getItem("High Score");
-	if (highScore === null) {
-		highScore = 0;
-	}
-	if (scoreTotal() > highScore) {
-		localStorage.setItem("High Score", scoreTotal());
-	}
+    const val = document.querySelector('input').value;
+    localStorage.setItem("Initials", input.value);
+
+    //save score to a high score scoreboard in local storage
+    var highScore = localStorage.getItem("High Score");
+    if (highScore === null) {
+        highScore = 0;
+    }
+    if (scoreTotal() > highScore) {
+        localStorage.setItem("High Score", scoreTotal());
+    }
 })
 
 
@@ -161,6 +167,7 @@ submit.addEventListener('click', function () {
 function getWinCount() {
     var winCount = parseInt(localStorage.getItem("Win Count"));
     console.log(winCount)
+    finalScoreEl.textContent = winCount
     if (winCount === null) {
         winCount = 0;
     }
@@ -192,7 +199,7 @@ function getWinCount() {
 
 }
 
-
+getWinCount()
 
 
 
