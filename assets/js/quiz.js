@@ -151,6 +151,7 @@ function scoreTotal() {
 submit.addEventListener('click', function () {
     const val = document.querySelector('input').value;
     localStorage.setItem("Initials", input.value);
+    finalScoreEl.textContent = "You scored " + getWinCount() + "/4";
 
     //save score to a high score scoreboard in local storage
     var highScore = localStorage.getItem("High Score");
@@ -199,7 +200,7 @@ function getWinCount() {
 
 }
 
-getWinCount()
+
 
 
 
