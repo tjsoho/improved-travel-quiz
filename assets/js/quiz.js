@@ -50,6 +50,10 @@ function startGame() {
     document.getElementById("startGame").style.display = "none";
     document.getElementById("storeDetails").style.display = "none";
     document.getElementById("nextQuestion").style.display = "block";
+    document.getElementById('success1').style.display = "none";
+	document.getElementById('success2').style.display = "none";
+	document.getElementById('success3').style.display = "none";
+	document.getElementById('success4').style.display = "none";
 }
 
 
