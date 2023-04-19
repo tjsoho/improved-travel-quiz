@@ -14,22 +14,20 @@
 <body>
 
     <!-- header containers the countdown timer, name and an exit button -->
-    <header class="container">
-        <div class="row align-items-center">
-            <div class="col timer">
+    <header>
+        <div class="timer">
 
-            </div>
-            <div class="col-md-auto" id="gameHeader">
-                <h2>The Frequent Flyer Travel Game</h2>
-            </div>
-            <div class="col">
-                <button class="exit">X</button>
-            </div>
+        </div>
+        <div id="gameHeader">
+            <h2>The Frequent Flyer Travel Game</h2>
+        </div>
+        <div>
+            <button class="exit">X</button>
         </div>
     </header>
 
     <!-- main section of the page container questions, answer options and score -->
-    <section>
+    <section id="end-game">
         <button id="startGame">START</button>
 
         <!-- question and answer div -->
@@ -57,43 +55,51 @@
     </div>
 
 
-        <!-- Entire left square section containing images, question and answer options -->
-        <section class="background-1" id="end-game">
-            <h4 id="finalScore"></h4>
-            <!-- Container for success images hidden until only one is revealed at the end-->
-            <div id="success1">
-                <h3 id="finalScore1"></h3>
-                <h4>You have Economy status</h4>
-                <p>Please wait for everyone else to board. Don't forget your neck pillow.</p>
-                <img class="sucess-Image" src="./assets/images/economy.png" alt="">
+    <!-- Entire left square section containing images, question and answer options -->
+    <section class="background-1" id="end-game">
+        <h4 id="finalScore"></h4>
+        <!-- Container for success images hidden until only one is revealed at the end-->
+        <div id="success1">
+            <h3 id="finalScore1"></h3>
+            <h4>Economy Status</h4>
+            <img class="sucess-Image" src="./assets/images/economy.png" alt="">
+            <p>Please wait for everyone else to board. Don't forget your neck pillow.</p>
+            <div>
                 <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
             </div>
+        </div>
 
-            <div id="success2">
-                <h3 id="finalScore2"></h3>
-                <h4>You have Premium-Economy status</h4>
-                <p>You can almost feel ritzy.</p>
-                <img class="sucess-Image" src="./assets/images/p-economy.png" alt="">
+        <div id="success2">
+            <h3 id="finalScore2"></h3>
+            <h4>Premium-Economy Status</h4>
+            <img class="sucess-Image" src="./assets/images/p-economy.png" alt="">
+            <p>You can almost feel ritzy.</p>
+            <div>
                 <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
             </div>
+        </div>
 
-            <div id="success3">
-                <h3 id="finalScore3"></h3>
-                <h4>You have Business Class status</h4>
-                <p>Enjoy your champange and sleep like a baby.</p>
-                <img class="sucess-Image" src="./assets/images/business.png" alt="">
+        <div id="success3">
+            <h3 id="finalScore3"></h3>
+            <h4>Business Class Status</h4>
+            <img class="sucess-Image" src="./assets/images/business.png" alt="">
+            <p>Enjoy your champange and sleep like a baby.</p>
+            <div>
                 <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
             </div>
+        </div>
 
-            <div id="success4">
-                <h3 id="finalScore4"></h3>
-                <h4>You have First Class status</h4>
-                <p>Its Dom Perignon and Caviar for you my friend.</p>
-                <img class="sucess-Image" src="./assets/images/first.png" alt="">
+        <div id="success4">
+            <h3 id="finalScore4"></h3>
+            <h4>First Class Status</h4>
+            <img class="sucess-Image" src="./assets/images/first.png" alt="">
+            <p>Its Dom Perignon and Caviar for you my friend.</p>
+            <div>
                 <button class="restart-btn" onclick="reloadGame()">Play Again?</button>
             </div>
+        </div>
 
-            <script src="./assets/js/quiz.js"></script>
+        <script src="./assets/js/quiz.js"></script>
 </body>
 
 </html>

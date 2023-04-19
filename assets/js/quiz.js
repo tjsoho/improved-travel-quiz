@@ -51,9 +51,10 @@ function startGame() {
     document.getElementById("storeDetails").style.display = "none";
     document.getElementById("nextQuestion").style.display = "block";
     document.getElementById('success1').style.display = "none";
-	document.getElementById('success2').style.display = "none";
-	document.getElementById('success3').style.display = "none";
-	document.getElementById('success4').style.display = "none";
+    document.getElementById('success2').style.display = "none";
+    document.getElementById('success3').style.display = "none";
+    document.getElementById('success4').style.display = "none";
+    document.querySelector('.timer').style.vissibility = 'vissible';
 }
 
 
@@ -82,12 +83,12 @@ function checkAnswer() {
     const correctAnswer = document.querySelector("." + questionsAll[questionIndex].answer[0]);
 
     if (selectedAnswer.textContent === questionsAll[questionIndex].answer) {
-        selectedAnswer.style.backgroundColor = "green";
+        selectedAnswer.style.backgroundColor = '#C7E9B0';
         win++;
         localStorage.setItem("Win Count", win);
     } else {
-        selectedAnswer.style.backgroundColor = "red";
-        correctAnswer.style.backgroundColor = "green"; // Set the background color of the correct answer element to green
+        selectedAnswer.style.backgroundColor = '#F96666';
+        correctAnswer.style.backgroundColor = '#C7E9B0'; // Set the background color of the correct answer element to green
         loss++;
         localStorage.setItem("Loss Count", loss);
         // secondsLeft -= 5
@@ -145,9 +146,9 @@ function countDown() {
 
 // This function tallys the final score
 function scoreTotal() {
-	var tally = win - loss;
-	console.log(tally);
-	return tally;
+    var tally = win - loss;
+    console.log(tally);
+    return tally;
 }
 
 
@@ -155,7 +156,7 @@ function scoreTotal() {
 submit.addEventListener('click', function () {
     const val = document.querySelector('input').value;
     localStorage.setItem("Initials", input.value);
-    finalScoreEl.textContent = "You scored " + getWinCount() + "/4";
+    finalScoreEl.textContent = getWinCount() + "/4";
 
     //save score to a high score scoreboard in local storage
     var highScore = localStorage.getItem("High Score");
@@ -180,33 +181,33 @@ function getWinCount() {
         document.getElementById('success1').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore1').textContent = "You scored " + winCount + "/4";
+        // document.getElementById('finalScore1').textContent = "You scored " + winCount + "/4";
 
     } else if (winCount === 2) {
         document.getElementById('success2').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore2').textContent = "You scored " + winCount + "/4";
+        // document.getElementById('finalScore2').textContent = "You scored " + winCount + "/4";
 
     } else if (winCount === 3) {
         document.getElementById('success3').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore3').textContent = "You scored " + winCount + "/4";
+        // document.getElementById('finalScore3').textContent = "You scored " + winCount + "/4";
 
     } else if (winCount === 4) {
         document.getElementById('success4').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore4').textContent = "You scored " + winCount + "/4";
+        // document.getElementById('finalScore4').textContent = "You scored " + winCount + "/4";
     }
     return winCount;
 
 }
 
-
-
-
+function reloadGame() {
+    window.location.reload()
+}
 
 
 
