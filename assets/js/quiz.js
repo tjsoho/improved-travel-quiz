@@ -54,7 +54,6 @@ function startGame() {
     document.getElementById('success2').style.display = "none";
     document.getElementById('success3').style.display = "none";
     document.getElementById('success4').style.display = "none";
-    document.querySelector('.timer').style.vissibility = 'vissible';
 }
 
 
@@ -132,7 +131,6 @@ function countDown() {
             // Stops execution of action at set interval
             clearInterval(timerInterval);
             // Calls function to create and append image
-            sendMessage();
             return;
         }
 
