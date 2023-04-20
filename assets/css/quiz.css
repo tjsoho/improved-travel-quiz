@@ -1,27 +1,41 @@
-/* background color #e9cec3 */
+* {
+  font-family: 'Prata', serif;
+}
+
+
 :root {
   --offwhite: rgb(249, 238, 223);
   --brown: #472F2B;
 }
 
 header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
   height: 60px;
   width: 95%;
   margin-left: 2.5%;
-  background-color: var(--offwhite);
-  border: solid 1px;
-  border-radius: 5px;
   padding-left: 50px;
   padding-right: 50px;
+  z-index: 1;
+}
+
+
+.logo{
+  position: relative;
+  z-index: 1;
+  top: -200px;
+  margin-top: 10px;
+}
+
+.exit {
+  position: relative;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: black;
 }
 
 .startImg {
+  text-align: center;
+  position: relative;
   border: solid 1px;
   border-radius: 5px;
   width: 400px;
@@ -32,26 +46,20 @@ header {
 body {
   background-color: #FAD6A5;
   text-align: center;
+  z-index: 1;
 }
 
-#gameHeader {
-  margin: auto;
-}
-
-.exit {
-  text-align: center;
-}
 
 /* All buttons styling */
 #startGame {
-  position: fixed;
+  position: absolute;
   background-color: var(--offwhite);
   border-radius: 5px;
-  padding: 5px 10px 5px 10px;
+  top: 53%;
+  left: 50%;
   border: solid 1px;
-  margin-top: 100px;
+  transform: translate(-50%, -50%);
   z-index: 100;
-  margin-left: -27%;
 }
 
 .nextContainer {
@@ -64,7 +72,7 @@ body {
 #nextQuestion {
   background-color: var(--offwhite);
   border-radius: 5px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 20px 5px 20px;
   border: solid 1px;
 }
 
@@ -73,7 +81,13 @@ body {
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   border: solid 1px;
+}
 
+#submitBtn{
+  background-color: var(--offwhite);
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  border: solid 1px;
 }
 
 .answer0 {
@@ -87,12 +101,12 @@ body {
   font-size: large;
 }
 
-/* game content styling */
+
 .game-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .questionAll {
@@ -100,7 +114,14 @@ body {
   margin: 30px;
 }
 
-
+input{
+  background-color: var(--offwhite);
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  border: solid 1px;
+  width: 150px;
+  text-align: center;
+}
 
 
 

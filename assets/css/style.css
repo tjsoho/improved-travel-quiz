@@ -1,5 +1,6 @@
-/* create a color var to use as a golobal color */
-
+*{
+    font-family: 'Prata', serif;
+}
 
 :root{
     --offwhite: rgb(249, 238, 223);

@@ -47,7 +47,7 @@ function startGame() {
     countDown();
     secondsLeft = 90;
     console.log("starting");
-    document.getElementById("startGame").style.display = "none";
+    document.getElementById("openingDiv").style.display = "none";
     document.getElementById("storeDetails").style.display = "none";
     document.getElementById("nextQuestion").style.display = "block";
     document.getElementById('success1').style.display = "none";
