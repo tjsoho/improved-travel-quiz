@@ -17,6 +17,10 @@ header {
   z-index: 1;
 }
 
+.countdown-timer {
+  border: solid 1px;
+  border-radius: 5px;
+}
 
 .logo{
   position: relative;
@@ -26,8 +30,6 @@ header {
 }
 
 .exit {
-  position: relative;
-  text-align: center;
   border: none;
   background-color: transparent;
   color: black;

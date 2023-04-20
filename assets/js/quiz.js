@@ -140,6 +140,7 @@ function countDown() {
             return;
         }
     }, 1000);
+    timerEl.classList.add("countdown-timer");
 }
 
 // This function tallys the final score
