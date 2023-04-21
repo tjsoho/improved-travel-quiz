@@ -173,7 +173,7 @@ function getWinCount() {
     var winCount = parseInt(localStorage.getItem("Win Count"));
     console.log(winCount)
     finalScoreEl.textContent = winCount
-    if (winCount === null) {
+    if (!winCount) {
         winCount = 0;
     }
     if (winCount === 0) {
@@ -211,6 +211,8 @@ function getWinCount() {
 }
 
 function reloadGame() {
+    localStorage.setItem("Win Count", 0)
+    localStorage.setItem("Loss Count", 0)
     window.location.reload()
 }
 

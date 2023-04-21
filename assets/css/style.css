@@ -8,14 +8,17 @@
 }
 
 header {
-    margin-top: 20px;
+    position: relative;
+    top: -20px;
     height: 60px;
     width: 95%;
     margin-left: 2.5%;
-    background-color: var(--offwhite);
-    border: solid 1px;
-    border-radius: 5px;
-}
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 1;
+    margin-bottom: 8%;
+  }
+
 
 body{
     background-color:#FAD6A5;

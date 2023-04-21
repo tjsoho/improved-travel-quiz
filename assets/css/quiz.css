@@ -221,3 +221,31 @@ p {
 #nextQuestion {
   display: none;
 }
+
+/* Responsive Sizes */
+@media (min-width: 1000px) {
+  .sucess-Image {
+    width: 300px;
+  }
+
+  .success1 {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 800px;
+  }
+  .success2 {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 800px;
+  }
+  .success3 {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 800px;
+  }
+  .success4 {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 800px;
+  }
+}
