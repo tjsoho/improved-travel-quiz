@@ -180,25 +180,25 @@ function getWinCount() {
         document.getElementById('success1').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        // document.getElementById('finalScore1').textContent = "You scored " + winCount + "/4";
+        document.getElementById('finalScore').textContent = winCount;
 
     } else if (winCount === 2) {
         document.getElementById('success2').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        // document.getElementById('finalScore2').textContent = "You scored " + winCount + "/4";
+        document.getElementById('finalScore').textContent = winCount;
 
     } else if (winCount === 3) {
         document.getElementById('success3').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        // document.getElementById('finalScore3').textContent = "You scored " + winCount + "/4";
+        document.getElementById('finalScore').textContent = winCount;
 
     } else if (winCount === 4) {
         document.getElementById('success4').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        // document.getElementById('finalScore4').textContent = "You scored " + winCount + "/4";
+        document.getElementById('finalScore').textContent = winCount;
     }
     return winCount;
 
