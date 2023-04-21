@@ -8,6 +8,15 @@
   --brown: #472F2B;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  border-color: #472F2B;
+}
+
 header {
   height: 60px;
   width: 95%;
@@ -26,16 +35,29 @@ header {
   border: solid 1px;
   border-radius: 40px;
   padding: 12px;
+  background-color: #f9eddf;
 }
 
-.logo{
+.logo {
   margin-bottom: 50px;
 }
 
 .exit {
-  border: none;
-  background-color: transparent;
+  border: black solid 1px;
   color: black;
+  text-align: center;
+  line-height: normal;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: solid 1px;
+  border-radius: 40px;
+  padding: 12px;
+  background-color: #f9eddf;
+}
+
+.exit:hover {
+  background-color: #f9eddf;
 }
 
 .startImg {
@@ -52,19 +74,13 @@ body {
   background-color: #FAD6A5;
   text-align: center;
   z-index: 1;
+  padding-bottom: 20px;
 }
 
 
 /* All buttons styling */
-#startGame {
-  position: absolute;
-  background-color: var(--offwhite);
-  border-radius: 5px;
-  top: 53%;
-  left: 50%;
-  border: solid 1px;
-  transform: translate(-50%, -50%);
-  z-index: 100;
+#startGame:hover {
+  filter: blur(2px);
 }
 
 .nextContainer {
@@ -88,7 +104,7 @@ body {
   border: solid 1px;
 }
 
-#submitBtn{
+#submitBtn {
   background-color: var(--offwhite);
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
@@ -119,7 +135,7 @@ body {
   margin: 30px;
 }
 
-input{
+input {
   background-color: var(--offwhite);
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
@@ -131,37 +147,70 @@ input{
 
 
 /* success images that are hidden on the html until the final score */
-p{
+
+p {
   font-style: italic;
 }
 
-.success-container{
+/* give success-container a background image */
+.success-container {
   margin-top: 10%;
+  bottom: 10px;
 }
 
 .sucess-Image {
   border: solid 1px;
   border-radius: 5px;
   width: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #success1 {
+  background-color: #f9eddf98;
   display: none;
+  border: #472F2B solid 1px;
+  border-radius: 50px;
+  margin-left: 33%;
+  margin-right: 33%;
   margin-top: 5%;
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 #success2 {
+  background-color: #f9eddf98;
   display: none;
-  
+  border: #472F2B solid 1px;
+  border-radius: 50px;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 5%;
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 #success3 {
+  background-color: #f9eddf98;
   display: none;
+  border: #472F2B solid 1px;
+  border-radius: 50px;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 5%;
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 #success4 {
+  background-color: #f9eddf98;
   display: none;
+  border: #472F2B solid 1px;
+  border-radius: 50px;
+  margin-left: 33%;
+  margin-right: 33%;
+  margin-top: 5%;
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 /* Elements that are hidden at the beginning of the game */

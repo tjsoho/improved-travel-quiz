@@ -21,7 +21,13 @@ body{
     background-color:#FAD6A5;
 }
 
+a {
+    color: black;
+  }
 
+  a:hover {
+    color: black;
+  }
 
 .mainSection {
     width: 100%;
