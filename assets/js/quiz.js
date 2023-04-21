@@ -176,29 +176,35 @@ function getWinCount() {
     if (winCount === null) {
         winCount = 0;
     }
-    if (winCount <= 1) {
+    if (winCount === 0) {
         document.getElementById('success1').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore').textContent = winCount;
+        document.getElementById('finalScore').textContent = winCount + "/4";
+
+    } else if (winCount === 1) {
+        document.getElementById('success1').style.display = "block";
+        document.getElementById('end-game').style.display = "none";
+        document.getElementById('storeDetails').style.display = "none";
+        document.getElementById('finalScore').textContent = winCount + "/4";
 
     } else if (winCount === 2) {
         document.getElementById('success2').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore').textContent = winCount;
+        document.getElementById('finalScore2').textContent = winCount + "/4";
 
     } else if (winCount === 3) {
         document.getElementById('success3').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore').textContent = winCount;
+        document.getElementById('finalScore3').textContent = winCount + "/4";
 
     } else if (winCount === 4) {
         document.getElementById('success4').style.display = "block";
         document.getElementById('end-game').style.display = "none";
         document.getElementById('storeDetails').style.display = "none";
-        document.getElementById('finalScore').textContent = winCount;
+        document.getElementById('finalScore4').textContent = winCount + "/4";
     }
     return winCount;
 
