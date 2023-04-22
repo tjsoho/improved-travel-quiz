@@ -69,22 +69,53 @@ button {
 
 @media (max-width: 1000px) {
     .right-container {
-        margin: 0px auto;
+        margin: auto;
         width: 90%;
         margin-top: 30%;
         text-align: center;
     }
 
-    .img-fluid{
-        width: 400px;
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: 20px;
     }
 }
 
 @media (max-width: 527px) {
+    .mainSection{
+        padding: 5px;
+    }
+    
     .right-container {
-        margin: 0px auto;
-        width: 90%;
-        margin-top: 30%;
+        margin: 0%;
+        padding: 0%;
+        width: 100%;
+        margin-top: 20%;
         text-align: center;
+    }
+
+    .col-6{
+        padding: 0px;
+    }
+
+   .mainSection{
+    margin-top: 20px;
+   }
+
+    .flyer-img {
+        width: 90%;
+        height: 90%;
+        border: solid 1px;
+        border-radius: 5px;
+    }
+    h1 {
+        
+        text-align: center;
+        width: fit-content;
+        font-weight: bold;
+        margin-bottom: 20px;
     }
 }
