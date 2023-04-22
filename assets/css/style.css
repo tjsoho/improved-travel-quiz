@@ -85,10 +85,14 @@ button {
     }
 }
 
-@media (max-width: 527px) {
+@media (max-width: 580px) {
     .mainSection{
         margin-top: 20px;
         padding: 5px;
+    }
+
+    .header{
+        top: 100px;
     }
     
     .right-container {
