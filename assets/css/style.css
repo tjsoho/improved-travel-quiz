@@ -1,8 +1,8 @@
-*{
+* {
     font-family: 'Prata', serif;
 }
 
-:root{
+:root {
     --offwhite: rgb(249, 238, 223);
     --brown: #472F2B;
 }
@@ -17,20 +17,20 @@ header {
     padding-right: 50px;
     z-index: 1;
     margin-bottom: 8%;
-  }
+}
 
 
-body{
-    background-color:#FAD6A5;
+body {
+    background-color: #FAD6A5;
 }
 
 a {
     color: black;
-  }
+}
 
-  a:hover {
+a:hover {
     color: black;
-  }
+}
 
 .mainSection {
     width: 100%;
@@ -58,9 +58,33 @@ a {
 
 }
 
-button{
+button {
     background-color: var(--offwhite);
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
     border: solid 1px;
+}
+
+/* responsive sizing */
+
+@media (max-width: 1000px) {
+    .right-container {
+        margin: 0px auto;
+        width: 90%;
+        margin-top: 30%;
+        text-align: center;
+    }
+
+    .img-fluid{
+        width: 400px;
+    }
+}
+
+@media (max-width: 527px) {
+    .right-container {
+        margin: 0px auto;
+        width: 90%;
+        margin-top: 30%;
+        text-align: center;
+    }
 }
