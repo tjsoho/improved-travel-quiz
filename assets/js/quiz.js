@@ -2,6 +2,7 @@ var questionIndex = 0;
 var win = 0;
 var loss = 0;
 var score = "";
+var secondsLeft = 90
 var submit = document.getElementById("submitBtn")
 var winCount = localStorage.getItem("Win Count")
 var lossCount = localStorage.getItem("Loss Count")
@@ -90,7 +91,7 @@ function checkAnswer() {
         correctAnswer.style.backgroundColor = '#C7E9B0'; // Set the background color of the correct answer element to green
         loss++;
         localStorage.setItem("Loss Count", loss);
-        // secondsLeft -= 5
+        secondsLeft -= 5
     }
 }
 
